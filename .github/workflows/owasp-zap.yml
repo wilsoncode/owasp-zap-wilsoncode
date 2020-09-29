@@ -1,0 +1,16 @@
+name: Run OWASP ZAP Baseline
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    name: Scan website
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.3.0
+        with:
+          target: 'https://wilsonlai.xyz/'
