@@ -11,6 +11,6 @@ jobs:
     name: Scan website
     steps:
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.3.0
+        uses: zaproxy/action-baseline@v0.4.0
         with:
           target: 'https://wilsonlai.xyz/'
